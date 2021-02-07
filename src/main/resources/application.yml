@@ -1,0 +1,20 @@
+# redis集群配置
+
+spring:
+  redis:
+    timeout: 50000
+    database: 0
+    password: redismixiaodong
+    connect-timeout: 50000
+    client-type: jedis
+    cluster:
+      nodes: 121.36.241.137:6001,121.36.241.137:6002,121.36.241.137:6003,121.36.241.137:6004,121.36.241.137:6005,121.36.241.137:6006
+      max-redirects: 6
+    jedis:
+      pool:
+        max-wait: -1
+        max-active: 20
+        max-idle: 20
+        min-idle: 0
+
+
